@@ -38,7 +38,6 @@ public class Account {
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "account")
     Wallet wallet;
 
-
     @CreationTimestamp
     LocalDateTime createdDate;
     @UpdateTimestamp
