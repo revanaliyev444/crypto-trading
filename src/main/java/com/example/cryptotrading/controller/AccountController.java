@@ -5,6 +5,7 @@ import com.example.cryptotrading.services.AccountService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,9 +33,10 @@ public class AccountController {
         return ResponseEntity.ok(accountService.getAccountById(id));
     }
 
-//    @DeleteMapping({"/Id"})
-//    public ResponseEntity<Void> deleteAccountById(@PathVariable Long id){
-//        accountService
-//    }
+    @DeleteMapping({"/Id"})
+    public ResponseEntity<Void> deleteAccountById(@PathVariable Long id){
+        accountService.deleteAccount(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 }
