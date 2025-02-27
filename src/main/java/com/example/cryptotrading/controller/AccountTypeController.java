@@ -1,8 +1,6 @@
 package com.example.cryptotrading.controller;
 
 
-import com.example.cryptotrading.model.entity.AccountType;
-import com.example.cryptotrading.services.AccountTypeService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
