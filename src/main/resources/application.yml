@@ -12,3 +12,8 @@ spring:
 
   application:
     name: crypto-trading
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
